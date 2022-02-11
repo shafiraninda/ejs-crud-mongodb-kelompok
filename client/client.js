@@ -14,8 +14,6 @@ app.use(express.json())
 
 
 app.get('/', async (req,res)=>{
-    // const data = fs.readFileSync('./data/data.json', 'utf-8')
-    // const dataParsed = JSON.parse(data)
     try {
         const response = await axios.get('http://localhost:3000/api/users');
         console.log(response.data);
@@ -57,6 +55,7 @@ app.get('/edit', async (req,res) => {
         res.render('edit.ejs', {
             pageTitle:"Edit",
             data: response.data.data
+            
         })
     }
 })

@@ -1,7 +1,5 @@
-const { urlencoded } = require('body-parser')
 const express = require('express')
 const { Db } = require('mongodb')
-const { message } = require('statuses')
 const app = express()
 const PORT = 3000
 
